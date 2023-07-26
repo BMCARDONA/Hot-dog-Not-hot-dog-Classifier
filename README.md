@@ -6,13 +6,11 @@ A binary classifier to test whether an image belongs to the "hot dog" class or t
 
 # Hot Dog Classification with Transfer Learning
 
-This project demonstrates how to use transfer learning to build a binary classifier that can distinguish between images of hot dogs and images of "not hot dogs." Four different pre-trained models are used: InceptionV3, MobileNetV2, ResNet50, and VGG16.
+This project demonstrates how to use transfer learning to build a binary classifier that can distinguish between images of hot dogs and images of "not hot dogs." Four different pre-trained models are used: InceptionV3, MobileNetV2, ResNet50, and VGG16. (Paper references are provided at the end.)
 
-![Not hot dog](images/not_hot_dog.jpeg)
+The [Hot dog - Not hot dog](https://www.kaggle.com/datasets/dansbecker/hot-dog-not-hot-dog) Kaggle dataset is used for training and validation.
 
-The [Hot dog - Not hot dog](https://www.kaggle.com/datasets/dansbecker/hot-dog-not-hot-dog) Kaggle dataset is used for training and validation. The images are preprocessed and augmented using the `RandomFlip` and `RandomRotation` layers from the `tensorflow.keras.layers.experimental.preprocessing` module.
-
-The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. The models are compiled with the Adam optimizer, binary cross-entropy loss, and accuracy metric.
+The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. Initially, all layers of the base model are frozen, meaning their weights are not updated during training. After an initial training phase of 5 epochs, the base model is set to be trainable and fine-tuned for an additional 5 epochs (from the first layer onward) with a lower learning rate.
 
 After training, the models achieve the following validation accuracies:
 
@@ -22,11 +20,14 @@ After training, the models achieve the following validation accuracies:
 | MobileNetV2 | 0.9095                                                                | 0.9146                                                                    |
 | ResNet50    | 0.8894                                                                | 0.9045                                                                    |
 | VGG16       | 0.8141                                                                | 0.8141                                                                    |
-                                                                     |
 
-Hot dog! 
+
+Overall, it seems that the InceptionV3 model has the best performance. Hot dog! 
 
 Paper references:
+- [InceptionV3](https://arxiv.org/pdf/1409.4842.pdf)
+- [MobileNetV2](https://arxiv.org/pdf/1704.04861.pdf)
+- [ResNet50](https://arxiv.org/pdf/1512.03385.pdf)
+- [VGG16](https://arxiv.org/pdf/1409.1556.pdf)
 
-This project provides a starting point for building image classification models using transfer learning with pre-trained models in TensorFlow and Keras. Hot dog! 
 
