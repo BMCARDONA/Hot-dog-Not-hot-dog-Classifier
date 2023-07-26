@@ -6,11 +6,11 @@ A binary classifier to test whether an image belongs to the "hot dog" class or t
 
 # Hot Dog Classification with Transfer Learning
 
-This project demonstrates how to use transfer learning to build a binary classifier that can distinguish between images of hot dogs and images of "not hot dogs." Four different pre-trained models are used: InceptionV3, MobileNetV2, ResNet50, and VGG16. (Paper references are provided at the end.)
+This project uses transfer learning to build a binary classifier that can distinguish between images of hot dogs and images of "not hot dogs." Four different pre-trained models are used: InceptionV3, MobileNetV2, ResNet50, and VGG16. (See below for paper references.)
 
 The [Hot dog - Not hot dog](https://www.kaggle.com/datasets/dansbecker/hot-dog-not-hot-dog) Kaggle dataset is used for training and validation.
 
-The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. Initially, all layers of the base model are frozen, meaning their weights are not updated during training. After an initial training phase of 5 epochs, the base model is set to be trainable and fine-tuned for an additional 5 epochs (from the first layer onward) with a lower learning rate.
+The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. Initially, all layers of the base model are frozen, meaning their weights are not updated during training. After an initial training phase of 5 epochs, however, the base model is set to be trainable and fine-tuned for an additional 5 epochs (from layer 0 onward) with a lower learning rate.
 
 After training, the models achieve the following validation accuracies:
 
