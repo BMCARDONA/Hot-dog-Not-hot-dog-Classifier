@@ -10,7 +10,7 @@ This project uses transfer learning to build a binary classifier that can distin
 
 The [Hot dog - Not hot dog](https://www.kaggle.com/datasets/dansbecker/hot-dog-not-hot-dog) Kaggle dataset is used for training and validation.
 
-The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. Initially, all layers of the base model are frozen, meaning their weights are not updated during training. After an initial training phase of 5 epochs, however, the base model is set to be trainable and fine-tuned for an additional 5 epochs (from layer 0 onward) with a lower learning rate. (For reference, please see the `notebook` directory to find my notebook for the MobileNetV2 model.)
+The pre-trained models are loaded with weights from the ImageNet dataset and fine-tuned on the training data. Initially, all layers of the base model are frozen, meaning their weights are not updated during training. After an initial training phase of 5 epochs, however, the base model is set to be trainable and fine-tuned (from layer 0 onward) for an additional 5 epochs with a lower learning rate. (For reference, please see the `notebook` directory to find my notebook for the MobileNetV2 model.)
 
 After training, the models achieve the following validation accuracies:
 
