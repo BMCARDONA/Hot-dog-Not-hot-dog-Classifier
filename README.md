@@ -1,6 +1,6 @@
 # Hot-dog-Not-hot-dog-Classifier
 
-A binary classifier to test whether an image belongs to the "hot dog" class or the "not hot dog" class, as seen on HBO's [*Silicon Valley*](https://www.bing.com/videos/riverview/relatedvideo?&q=hot+dog+not+a+hot+god+silicon+valley&&mid=162A96163FFFB5F6FCB1162A96163FFFB5F6FCB1&&FORM=VRDGAR).
+A binary classifier to test whether an image belongs to the "hot dog" class or the "not hot dog" class, as seen on HBO's [*Silicon Valley*](https://www.youtube.com/watch?v=ACmydtFDTGs&ab_channel=HBO).
 
 ![Not hot dog](images/not_hot_dog.jpeg)
 
